@@ -8,9 +8,9 @@
 	],
 	"sourcesContent": [
 		"@import \"partials/variables\";\n@import \"partials/layout\";",
-		"",
-		""
+		"// Colors\n\n$primaryColor: #24292E;\n$secondaryColor: #fff;\n\n// Media Queries\n\n$desktop: 1170px;\n$tablet: 670px;\n$mobile: 420px;\n\n// Margins and paddings\n\n$normalPadding: 15px;\n$normalMargin: $normalPadding;\n\n$borderRadius: 5px",
+		"body {\n    background-color: $primaryColor\n}\n\nmain {\n    width: 100%;\n    max-width: $desktop;\n    margin: 30px auto;\n    background-color: $secondaryColor;\n    padding: $normalPadding;\n    border-radius: $borderRadius;\n    box-sizing: border-box;\n\n    & > ul {\n        padding: 0;\n        list-style: none;\n        display: flex;\n        flex-flow: wrap row;\n        justify-content: space-between;\n\n        & > li {\n            flex: 0 0 32.5%;\n            border: 1px solid $primaryColor;\n            border-radius: $borderRadius;\n            padding: $normalPadding;\n            margin-bottom: $normalMargin;\n            box-sizing: border-box;\n        }\n    }\n}\n\na {\n    text-decoration: none;\n\n    &.name {\n        font-size: 1.3em\n    }\n}\n"
 	],
 	"names": [],
-	"mappings": ""
+	"mappings": "AEAA,AAAA,IAAI,CAAC;EACD,gBAAgB,EDCL,OAAO,GCArB;;AAED,AAAA,IAAI,CAAC;EACD,KAAK,EAAE,IAAI;EACX,SAAS,EDCH,MAAM;ECAZ,MAAM,EAAE,SAAS;EACjB,gBAAgB,EDLH,IAAI;ECMjB,OAAO,EDIK,IAAI;ECHhB,aAAa,EDMF,GAAG;ECLd,UAAU,EAAE,UAAU,GAkBzB;EAzBD,AASI,IATA,GASI,EAAE,CAAC;IACH,OAAO,EAAE,CAAC;IACV,UAAU,EAAE,IAAI;IAChB,OAAO,EAAE,IAAI;IACb,SAAS,EAAE,QAAQ;IACnB,eAAe,EAAE,aAAa,GAUjC;IAxBL,AAgBQ,IAhBJ,GASI,EAAE,GAOE,EAAE,CAAC;MACH,IAAI,EAAE,SAAS;MACf,MAAM,EAAE,GAAG,CAAC,KAAK,CDpBd,OAAO;MCqBV,aAAa,EDPV,GAAG;MCQN,OAAO,EDXH,IAAI;MCYR,aAAa,EDZT,IAAI;MCaR,UAAU,EAAE,UAAU,GACzB;;AAIT,AAAA,CAAC,CAAC;EACE,eAAe,EAAE,IAAI,GAKxB;EAND,AAGI,CAHH,AAGI,KAAK,CAAC;IACH,SAAS,EAAE,KACf,GAAC"
 }

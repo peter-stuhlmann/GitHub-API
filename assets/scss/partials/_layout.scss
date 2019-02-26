@@ -1,0 +1,38 @@
+body {
+    background-color: $primaryColor
+}
+
+main {
+    width: 100%;
+    max-width: $desktop;
+    margin: 30px auto;
+    background-color: $secondaryColor;
+    padding: $normalPadding;
+    border-radius: $borderRadius;
+    box-sizing: border-box;
+
+    & > ul {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-flow: wrap row;
+        justify-content: space-between;
+
+        & > li {
+            flex: 0 0 32.5%;
+            border: 1px solid $primaryColor;
+            border-radius: $borderRadius;
+            padding: $normalPadding;
+            margin-bottom: $normalMargin;
+            box-sizing: border-box;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+
+    &.name {
+        font-size: 1.3em
+    }
+}
