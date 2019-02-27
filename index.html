@@ -43,11 +43,49 @@
         <aside>&nbsp;</aside>
 
         <section class="content">
-            <h2>Public Repositories <span id="reposNumber"></span></h2>
-            <ul class="gh_repositories"></ul>
-            <ul class="gh_repositories-more"></ul>
 
-            <button id="more-repositories">&rarr; Show more repositories</button>
+            <nav id="mainnav">
+                <button onclick="openTab('Overview')">Overview</button>
+                <button onclick="openTab('Repositories')">Repositories</button>
+                <button onclick="openTab('Projects')">Projects</button>
+                <button onclick="openTab('Stars')">Stars</button>
+                <button onclick="openTab('Followers')">Followers</button>
+                <button onclick="openTab('Following')">Following</button>
+            </nav>
+
+            <div id="Overview" class="tab">
+                <h2>Public Repositories <span id="reposNumber"></span></h2>
+                <ul class="gh_repositories"></ul>
+                <ul class="gh_repositories-more"></ul>
+
+                <button id="more-repositories">&rarr; Show more repositories</button>
+            </div>
+
+            <div id="Repositories" class="tab" style="display:none">
+                <h2>Repositories</h2>
+                <p>This page is under construction.</p>
+            </div>
+
+            <div id="Projects" class="tab" style="display:none">
+                <h2>Projects</h2>
+                <p>This page is under construction.</p>
+            </div>
+
+            <div id="Stars" class="tab" style="display:none">
+                <h2>Stars</h2>
+                <p>This page is under construction.</p>
+            </div>
+
+            <div id="Followers" class="tab" style="display:none">
+                <h2>Followers</h2>
+                <p>This page is under construction.</p>
+            </div>
+
+            <div id="Following" class="tab" style="display:none">
+                <h2>Following</h2>
+                <p>This page is under construction.</p>
+            </div>
+
         </section>
     </main>
     <footer>
