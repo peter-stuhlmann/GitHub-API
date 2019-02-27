@@ -18,8 +18,8 @@ fetch("https://api.github.com/users/peter-stuhlmann?client_id=25bb194b081525d081
                 <div id="gh_email"><i class="fas fa-envelope">&nbsp;</i><a href="mailto:${user.email}">${user.email}</a></div>
                 <div id="gh_blog"><i class="fas fa-link">&nbsp;</i><a href="${user.blog}">${user.blog}</a></div>
             `)
-
             document.querySelector('aside').innerHTML = userInfos.join('')
+            document.querySelector('#reposNumber').innerHTML = `(${user.public_repos})`
         },
     )
     .catch(
@@ -49,7 +49,6 @@ fetch("https://api.github.com/users/peter-stuhlmann/repos?client_id=25bb194b0815
                     `)
                 }
             )
-
             document.querySelector('.gh_repositories').innerHTML = repoList.join('')
         },
     )
