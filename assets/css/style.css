@@ -1,16 +1,17 @@
 body {
-  background-color: #24292E;
+  background-color: #fff;
   font-family: "Open Sans", sans-serif; }
 
 main {
   width: 100%;
-  max-width: 1170px;
+  max-width: 1080px;
   margin: 30px auto;
   background-color: #fff;
   padding: 15px;
   border-radius: 5px;
   box-sizing: border-box;
-  display: flex; }
+  display: flex;
+  justify-content: space-between; }
 
 .content {
   flex: 0 0 74%; }
@@ -37,9 +38,34 @@ main {
 aside {
   flex: 0 0 24%; }
 
+#gh_avatar {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px; }
+
+#gh_username {
+  font-size: 1.65em;
+  font-weight: bold; }
+
+#gh_login {
+  color: #666;
+  font-size: 1.65em;
+  margin-bottom: 15px; }
+
+#gh_bio {
+  margin-bottom: 15px; }
+
+#gh_location {
+  margin-bottom: calc(15px / 2); }
+
+#gh_email {
+  margin-bottom: calc(15px / 2); }
+
+#gh_blog
 a {
   text-decoration: none; }
-  a.name {
+  #gh_blog
+a.name {
     font-size: 1.3em; }
 
 /* open-sans-regular - latin */

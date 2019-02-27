@@ -1,5 +1,5 @@
 body {
-    background-color: $primaryColor;
+    background-color: $secondaryColor;
     font-family: $primaryFont
 }
 
@@ -12,6 +12,7 @@ main {
     border-radius: $borderRadius;
     box-sizing: border-box;
     display: flex;
+    justify-content: space-between
 }
 
 .content {
@@ -48,6 +49,37 @@ main {
 aside {
     flex: 0 0 24%
 }
+
+#gh_avatar {
+    width: 100%;
+    border-radius: $borderRadius;
+    margin-bottom: $normalMargin
+}
+
+#gh_username {
+    font-size: 1.65em;
+    font-weight: bold
+}
+
+#gh_login {
+    color: $tertiaryColor;
+    font-size: 1.65em;
+    margin-bottom: $normalMargin
+}
+
+#gh_bio {
+    margin-bottom: $normalMargin
+}
+
+#gh_location {
+    margin-bottom: calc(#{$normalMargin} / 2)
+}
+
+#gh_email {
+        margin-bottom: calc(#{$normalMargin} / 2)
+}
+
+#gh_blog
 
 a {
     text-decoration: none;
