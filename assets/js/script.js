@@ -38,13 +38,14 @@ fetch("https://api.github.com/users/peter-stuhlmann/repos?client_id=25bb194b0815
     .then(
         repos => {
             let repoList = [];
+            let repoListMore = [];
             repos.slice(0, 4).forEach(
                 repo => {
-                    
+
                     if (repo.description == null) {
                         repo.description = "&nbsp;"
                     }
-                    
+
                     repoList.push(`
                         <li><a class="name" title="Redirect to github.com" target="_blanc" href="${repo.html_url}">${repo.name}</a>
                             <div class="description">${repo.description}</div>
@@ -56,6 +57,28 @@ fetch("https://api.github.com/users/peter-stuhlmann/repos?client_id=25bb194b0815
                 }
             )
             document.querySelector('.gh_repositories').innerHTML = repoList.join('')
+
+            repos.slice(4).forEach(
+                repo => {
+
+                    if (repo.description == null) {
+                        repo.description = "&nbsp;"
+                    }
+
+                    repoListMore.push(`
+                        <li><a class="name" title="Redirect to github.com" target="_blanc" href="${repo.html_url}">${repo.name}</a>
+                            <div class="description">${repo.description}</div>
+                            <span><i class="fas fa-circle">&nbsp;</i>${repo.language}</span>
+                            <span><i class="fas fa-star">&nbsp;</i>${repo.stargazers_count}</span>
+                            <span><i class="fas fa-code-branch">&nbsp;</i>${repo.forks}</span>
+                        </li>                    
+                    `)
+                }
+            )
+            document.querySelector('#more-repositories').addEventListener('click', function () {
+                document.querySelector('.gh_repositories-more').innerHTML = repoListMore.join('')
+                document.querySelector('#more-repositories').style.display = "none"
+            });
         },
     )
     .catch(
