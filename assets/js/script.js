@@ -109,6 +109,15 @@ github_api()
 document.querySelector('#input-search').addEventListener('click', github_api)
 
 
+// 'Enter' instead of button click
+
+document.querySelector('#input').addEventListener('keypress', function (e) {
+    if (e.keyCode === 13) {
+        github_api()
+    }
+});
+
+
 
 // MAIN NAV
 
