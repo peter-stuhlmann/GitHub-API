@@ -38,8 +38,13 @@ fetch("https://api.github.com/users/peter-stuhlmann/repos?client_id=25bb194b0815
     .then(
         repos => {
             let repoList = [];
-            repos.slice(0,4).forEach(
+            repos.slice(0, 4).forEach(
                 repo => {
+                    
+                    if (repo.description == null) {
+                        repo.description = "&nbsp;"
+                    }
+                    
                     repoList.push(`
                         <li><a class="name" title="Redirect to github.com" target="_blanc" href="${repo.html_url}">${repo.name}</a>
                             <div class="description">${repo.description}</div>
