@@ -81,6 +81,18 @@ main {
             }
         }
     }
+    
+    button {
+        border: 0;
+        background-color: transparent;
+        outline: 0;
+        transition: $standardTransition;
+        cursor: pointer;
+        
+        &:hover {
+            opacity: 0.6
+        }
+    }
 }
 
 aside {
