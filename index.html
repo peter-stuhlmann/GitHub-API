@@ -44,14 +44,16 @@
 
         <section class="content">
 
-            <nav id="mainnav">
-                <button onclick="openTab('Overview')">Overview</button>
-                <button onclick="openTab('Repositories')">Repositories</button>
-                <button onclick="openTab('Projects')">Projects</button>
-                <button onclick="openTab('Stars')">Stars</button>
-                <button onclick="openTab('Followers')">Followers</button>
-                <button onclick="openTab('Following')">Following</button>
-            </nav>
+            <div class="navbar">
+                <nav id="mainnav">
+                    <button class="tablink selected" onclick="openTab(event,'Overview')">Overview</button>
+                    <button class="tablink" onclick="openTab(event,'Repositories')">Repositories</button>
+                    <button class="tablink" onclick="openTab(event,'Projects')">Projects</button>
+                    <button class="tablink" onclick="openTab(event,'Stars')">Stars</button>
+                    <button class="tablink" onclick="openTab(event,'Followers')">Followers</button>
+                    <button class="tablink" onclick="openTab(event,'Following')">Following</button>
+                </nav>
+            </div>
 
             <div id="Overview" class="tab">
                 <h2>Public Repositories <span id="reposNumber"></span></h2>
