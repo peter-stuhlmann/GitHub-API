@@ -20,6 +20,7 @@ fetch("https://api.github.com/users/peter-stuhlmann?client_id=25bb194b081525d081
             `)
             document.querySelector('aside').innerHTML = userInfos.join('')
             document.querySelector('#reposNumber').innerHTML = `(${user.public_repos})`
+            document.querySelector('#userlogin').innerHTML = `<img src="${user.avatar_url}"><i class="fas fa-caret-down"></i>`
         },
     )
     .catch(
@@ -42,9 +43,9 @@ fetch("https://api.github.com/users/peter-stuhlmann/repos?client_id=25bb194b0815
                     repoList.push(`
                         <li><a class="name" title="Redirect to github.com" target="_blanc" href="${repo.html_url}">${repo.name}</a>
                             <div>${repo.description}</div>
-                            <div><i class="fas fa-circle">&nbsp;</i>${repo.language}</div>
-                            <div><i class="fas fa-star">&nbsp;</i>${repo.stargazers_count}</div>
-                            <div><i class="fas fa-code-branch">&nbsp;</i>${repo.forks}</div>
+                            <span><i class="fas fa-circle">&nbsp;</i>${repo.language}</span>
+                            <span><i class="fas fa-star">&nbsp;</i>${repo.stargazers_count}</span>
+                            <span><i class="fas fa-code-branch">&nbsp;</i>${repo.forks}</span>
                         </li>                    
                     `)
                 }
