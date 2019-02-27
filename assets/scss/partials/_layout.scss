@@ -1,6 +1,7 @@
 body {
     background-color: $secondaryColor;
-    font-family: $primaryFont
+    font-family: $primaryFont;
+    line-height: 1.4
 }
 
 main {
@@ -57,18 +58,19 @@ aside {
 }
 
 #gh_username {
-    font-size: 1.65em;
+    font-size: 1.75em;
+    line-height: 1.2;
     font-weight: bold
 }
 
 #gh_login {
     color: $tertiaryColor;
     font-size: 1.65em;
-    margin-bottom: $normalMargin
+    margin-bottom: calc(#{$normalMargin} * 1.5)
 }
 
 #gh_bio {
-    margin-bottom: $normalMargin
+    margin-bottom: calc(#{$normalMargin} * 1.5)
 }
 
 #gh_location {
@@ -76,10 +78,19 @@ aside {
 }
 
 #gh_email {
-        margin-bottom: calc(#{$normalMargin} / 2)
+    margin-bottom: calc(#{$normalMargin} / 2);
+
+    a {
+        text-decoration: none
+    }
 }
 
-#gh_blog
+#gh_blog {
+    a {
+        text-decoration: none
+    }
+}
+
 
 a {
     text-decoration: none;
