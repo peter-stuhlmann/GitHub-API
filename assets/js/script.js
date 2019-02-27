@@ -14,6 +14,23 @@ document.querySelector('#input-search').addEventListener('click', function () {
         .then(
             user => {
                 let userInfos = [];
+
+                if (user.name == null) {
+                    user.name = ""
+                }
+                if (user.bio == null) {
+                    user.bio = ""
+                }
+                if (user.location == null) {
+                    user.location = ""
+                }
+                if (user.email == null) {
+                    user.email = ""
+                }
+                if (user.blog == null) {
+                    user.blog = ""
+                }
+
                 userInfos.push(`
                 <img id="gh_avatar" src="${user.avatar_url}">  
                 <div id="gh_username">${user.name}</div>
