@@ -4433,7 +4433,7 @@ header {
   border-radius: 5px; }
 
 footer {
-  position: absolute;
+  position: relative;
   right: 0;
   bottom: 0;
   left: 0; }
