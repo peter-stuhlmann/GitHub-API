@@ -4319,6 +4319,20 @@ main {
         font-weight: bold; }
       .content ul > li span {
         margin-right: calc(15px * 1.4); }
+      .content ul > li .language_html {
+        color: #E34C26; }
+      .content ul > li .language_css {
+        color: #563D7C; }
+      .content ul > li .language_js {
+        color: #F1E05A; }
+      .content ul > li .language_php {
+        color: #4F5D95; }
+      .content ul > li .language_cPlusPlus {
+        color: #F34B7D; }
+      .content ul > li .language_TeX {
+        color: #3D6117; }
+      .content ul > li .language_default {
+        color: #666; }
   .content button {
     border: 0;
     background-color: transparent;

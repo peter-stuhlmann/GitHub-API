@@ -79,6 +79,28 @@ main {
             span {
                 margin-right: calc(#{$normalMargin} * 1.4);
             }
+            
+            .language_html {
+                color: #E34C26
+            }
+            .language_css {
+                color: #563D7C
+            }
+            .language_js {
+                color: #F1E05A
+            }
+            .language_php {
+                color: #4F5D95;
+            }
+            .language_cPlusPlus {
+                color: #F34B7D
+            }
+            .language_TeX {
+                color: #3D6117
+            }
+            .language_default {
+                color: $tertiaryColor
+            }
         }
     }
     
