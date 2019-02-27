@@ -1,8 +1,13 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
 body {
     background-color: $secondaryColor;
     font-family: $primaryFont;
     line-height: 1.4;
-    margin: 0
+    margin: 0;
 }
 
 main {
@@ -133,4 +138,8 @@ a {
 
 .fas {
     color: $tertiaryColor
+}
+
+.hotpink {
+    color: hotpink
 }

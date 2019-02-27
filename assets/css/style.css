@@ -4257,6 +4257,10 @@ readers do not read off random characters that represent icons */
   position: static;
   width: auto; }
 
+html {
+  height: 100%;
+  box-sizing: border-box; }
+
 body {
   background-color: #fff;
   font-family: "Open Sans", sans-serif;
@@ -4357,6 +4361,9 @@ a {
 .fas {
   color: #666; }
 
+.hotpink {
+  color: hotpink; }
+
 header {
   background-color: #24292E;
   width: 100%;
@@ -4424,6 +4431,42 @@ header {
 #userlogin img {
   height: 25px;
   border-radius: 5px; }
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+  footer .wrap {
+    color: #666;
+    width: 100%;
+    max-width: 1080px;
+    margin: 15px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap; }
+    footer .wrap .footer-img {
+      flex: 0 0 10%;
+      text-align: center; }
+    footer .wrap ul {
+      padding: 0;
+      flex: 0 0 40%; }
+      footer .wrap ul li {
+        display: inline;
+        margin: calc(15px / 2);
+        font-size: 0.85em; }
+        footer .wrap ul li a {
+          color: #666; }
+    footer .wrap ul:last-child {
+      padding: 0;
+      flex: 0 0 40%;
+      text-align: right; }
+      footer .wrap ul:last-child li {
+        display: inline;
+        margin: calc(15px / 2);
+        font-size: 0.85em; }
+        footer .wrap ul:last-child li a {
+          color: #666; }
 
 /* open-sans-regular - latin */
 @font-face {
