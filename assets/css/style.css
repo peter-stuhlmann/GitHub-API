@@ -4260,7 +4260,8 @@ readers do not read off random characters that represent icons */
 body {
   background-color: #fff;
   font-family: "Open Sans", sans-serif;
-  line-height: 1.4; }
+  line-height: 1.4;
+  margin: 0; }
 
 main {
   width: 100%;
@@ -4288,7 +4289,7 @@ main {
     flex-flow: wrap row;
     justify-content: space-between; }
     .content > ul > li {
-      flex: 0 0 32.5%;
+      flex: 0 0 49%;
       border: 1px solid #24292E;
       border-radius: 5px;
       padding: 15px;
@@ -4331,6 +4332,63 @@ a {
   text-decoration: none; }
   a.name {
     font-size: 1.3em; }
+
+.fas {
+  color: #666; }
+
+header {
+  background-color: #24292E;
+  width: 100%;
+  padding: 15px;
+  color: #fff !important;
+  box-sizing: border-box; }
+  header .fab {
+    color: #fff !important;
+    font-size: 40px;
+    vertical-align: middle; }
+
+#input {
+  width: 300px;
+  height: 30px;
+  background-color: #666;
+  color: #fff;
+  opacity: 0.7;
+  border: 0;
+  border-radius: 5px;
+  padding: 15px;
+  box-sizing: border-box;
+  outline: 0; }
+  #input::placeholder {
+    color: #fff; }
+
+.topnav {
+  display: inline-block; }
+  .topnav li {
+    display: inline;
+    margin-left: 15px;
+    font-weight: bold;
+    transition: 0.2s; }
+  .topnav a {
+    color: #fff; }
+    .topnav a:hover {
+      color: #666; }
+
+.usernav {
+  display: inline-block;
+  float: right; }
+  .usernav li {
+    display: inline;
+    margin-left: 15px; }
+    .usernav li:hover .fas {
+      color: #666; }
+    .usernav li .fas {
+      color: #fff;
+      transition: 0.2s;
+      vertical-align: super; }
+
+#userlogin img {
+  height: 25px;
+  border-radius: 5px; }
 
 /* open-sans-regular - latin */
 @font-face {

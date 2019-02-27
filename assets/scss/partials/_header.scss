@@ -1,0 +1,76 @@
+header {
+    background-color: $primaryColor;
+    width: 100%;
+    padding: $normalPadding;
+    color: $secondaryColor !important;
+    box-sizing: border-box;
+
+    .fab {
+        color: $secondaryColor !important;
+        font-size: 40px;
+        vertical-align: middle
+    }
+}
+
+#input {
+    width: 300px;
+    height: 30px;
+    background-color: $tertiaryColor;
+    color: $secondaryColor;
+    opacity: 0.7;
+    border: 0;
+    border-radius: $borderRadius;
+    padding: $normalPadding;
+    box-sizing: border-box;
+    outline: 0;
+
+    &::placeholder {
+        color: $secondaryColor
+    }
+}
+
+.topnav {
+    display: inline-block;
+
+    li {
+        display: inline;
+        margin-left: $normalMargin;
+        font-weight: bold;
+        transition: $standardTransition
+    }
+
+    a {
+        color: $secondaryColor;
+
+        &:hover {
+            color: $tertiaryColor
+        }
+    }
+}
+
+.usernav {
+    display: inline-block;
+    float: right;
+
+    li {
+        display: inline;
+        margin-left: $normalMargin;
+
+        &:hover .fas {
+            color: $tertiaryColor;
+        }
+
+        .fas {
+            color: $secondaryColor;
+            transition: $standardTransition;
+            vertical-align: super;
+        }
+    }
+}
+
+#userlogin {
+    img {
+        height: 25px;
+        border-radius: $borderRadius
+    }
+}
