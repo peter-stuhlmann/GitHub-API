@@ -14,11 +14,16 @@ main {
     border-radius: $borderRadius;
     box-sizing: border-box;
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    flex-flow: row wrap
 }
 
 .content {
     flex: 0 0 74%;
+
+    @media only screen and (max-width: $tablet) {
+        flex: 0 0 100%
+    }
 
     h1 {
         font-size: 2.6em;
@@ -30,6 +35,10 @@ main {
         }
     }
 
+    h2 {
+        font-weight: normal
+    }
+
     & > ul {
         padding: 0;
         list-style: none;
@@ -39,17 +48,42 @@ main {
 
         & > li {
             flex: 0 0 49%;
-            border: 1px solid $primaryColor;
+            font-size: 0.85em;
+            color: $tertiaryColor;
+            border: 1px solid $quinaryColor;
             border-radius: $borderRadius;
             padding: $normalPadding;
             margin-bottom: $normalMargin;
             box-sizing: border-box;
+
+            @media only screen and (max-width: $desktop) {
+                flex: 0 0 100%
+            }
+
+            .description {
+                margin: $normalMargin 0
+            }
+
+            a {
+                color: $quaternaryColor;
+                font-size: 1.177em;
+                text-decoration: none;
+                font-weight: bold
+            }
+
+            span {
+                margin-right: calc(#{$normalMargin} * 1.4);
+            }
         }
     }
 }
 
 aside {
-    flex: 0 0 24%
+    flex: 0 0 24%;
+
+    @media only screen and (max-width: $tablet) {
+        flex: 0 0 100%
+    }
 }
 
 #gh_avatar {
@@ -95,10 +129,6 @@ aside {
 
 a {
     text-decoration: none;
-
-    &.name {
-        font-size: 1.3em
-    }
 }
 
 .fas {

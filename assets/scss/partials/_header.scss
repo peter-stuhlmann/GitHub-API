@@ -8,7 +8,13 @@ header {
     .fab {
         color: $secondaryColor !important;
         font-size: 40px;
-        vertical-align: middle
+        vertical-align: middle;
+
+        @media only screen and (max-width: $tablet) {
+            text-align: center;
+            margin-bottom: $normalMargin;
+            display: block
+        }
     }
 }
 
@@ -24,6 +30,11 @@ header {
     box-sizing: border-box;
     outline: 0;
 
+    @media only screen and (max-width: $tablet) {
+        display: block;
+        width: 100%
+    }
+
     &::placeholder {
         color: $secondaryColor
     }
@@ -32,18 +43,26 @@ header {
 .topnav {
     display: inline-block;
 
-    li {
-        display: inline;
-        margin-left: $normalMargin;
-        font-weight: bold;
-        transition: $standardTransition
+    @media only screen and (max-width: $tablet) {
+        text-align: center
     }
 
-    a {
-        color: $secondaryColor;
+    ul {
+        padding: 0
+    }
 
-        &:hover {
-            color: $tertiaryColor
+    li {
+        display: inline;
+        margin: 0 calc(#{$normalMargin} / 2);
+        font-weight: bold;
+
+        a {
+            color: $secondaryColor;
+            transition: $standardTransition;
+
+            &:hover {
+                color: $tertiaryColor
+            }
         }
     }
 }

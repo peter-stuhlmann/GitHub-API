@@ -4272,16 +4272,22 @@ main {
   border-radius: 5px;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  flex-flow: row wrap; }
 
 .content {
   flex: 0 0 74%; }
+  @media only screen and (max-width: 670px) {
+    .content {
+      flex: 0 0 100%; } }
   .content h1 {
     font-size: 2.6em; }
     .content h1::after {
       content: url("../img/powered.png");
       vertical-align: 12px;
       font-size: 80%; }
+  .content h2 {
+    font-weight: normal; }
   .content > ul {
     padding: 0;
     list-style: none;
@@ -4290,14 +4296,31 @@ main {
     justify-content: space-between; }
     .content > ul > li {
       flex: 0 0 49%;
-      border: 1px solid #24292E;
+      font-size: 0.85em;
+      color: #666;
+      border: 1px solid #ccc;
       border-radius: 5px;
       padding: 15px;
       margin-bottom: 15px;
       box-sizing: border-box; }
+      @media only screen and (max-width: 1080px) {
+        .content > ul > li {
+          flex: 0 0 100%; } }
+      .content > ul > li .description {
+        margin: 15px 0; }
+      .content > ul > li a {
+        color: #0366d6;
+        font-size: 1.177em;
+        text-decoration: none;
+        font-weight: bold; }
+      .content > ul > li span {
+        margin-right: calc(15px * 1.4); }
 
 aside {
   flex: 0 0 24%; }
+  @media only screen and (max-width: 670px) {
+    aside {
+      flex: 0 0 100%; } }
 
 #gh_avatar {
   width: 100%;
@@ -4330,8 +4353,6 @@ aside {
 
 a {
   text-decoration: none; }
-  a.name {
-    font-size: 1.3em; }
 
 .fas {
   color: #666; }
@@ -4346,6 +4367,11 @@ header {
     color: #fff !important;
     font-size: 40px;
     vertical-align: middle; }
+    @media only screen and (max-width: 670px) {
+      header .fab {
+        text-align: center;
+        margin-bottom: 15px;
+        display: block; } }
 
 #input {
   width: 300px;
@@ -4358,20 +4384,29 @@ header {
   padding: 15px;
   box-sizing: border-box;
   outline: 0; }
+  @media only screen and (max-width: 670px) {
+    #input {
+      display: block;
+      width: 100%; } }
   #input::placeholder {
     color: #fff; }
 
 .topnav {
   display: inline-block; }
+  @media only screen and (max-width: 670px) {
+    .topnav {
+      text-align: center; } }
+  .topnav ul {
+    padding: 0; }
   .topnav li {
     display: inline;
-    margin-left: 15px;
-    font-weight: bold;
-    transition: 0.2s; }
-  .topnav a {
-    color: #fff; }
-    .topnav a:hover {
-      color: #666; }
+    margin: 0 calc(15px / 2);
+    font-weight: bold; }
+    .topnav li a {
+      color: #fff;
+      transition: 0.2s; }
+      .topnav li a:hover {
+        color: #666; }
 
 .usernav {
   display: inline-block;
