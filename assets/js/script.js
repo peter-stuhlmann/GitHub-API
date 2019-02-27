@@ -38,11 +38,11 @@ fetch("https://api.github.com/users/peter-stuhlmann/repos?client_id=25bb194b0815
     .then(
         repos => {
             let repoList = [];
-            repos.forEach(
+            repos.slice(0,4).forEach(
                 repo => {
                     repoList.push(`
                         <li><a class="name" title="Redirect to github.com" target="_blanc" href="${repo.html_url}">${repo.name}</a>
-                            <div>${repo.description}</div>
+                            <div class="description">${repo.description}</div>
                             <span><i class="fas fa-circle">&nbsp;</i>${repo.language}</span>
                             <span><i class="fas fa-star">&nbsp;</i>${repo.stargazers_count}</span>
                             <span><i class="fas fa-code-branch">&nbsp;</i>${repo.forks}</span>
