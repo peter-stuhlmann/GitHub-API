@@ -108,3 +108,16 @@ function github_api() {
 
 github_api()
 document.querySelector('#input-search').addEventListener('click', github_api)
+
+
+
+// MAIN NAV
+
+function openTab(tabName) {
+    var i;
+    var x = document.querySelector('.tab');
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    document.querySelector('#tabName').style.display = "block";
+}
