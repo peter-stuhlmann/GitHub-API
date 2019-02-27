@@ -58,6 +58,7 @@ function github_api() {
             repos => {
                 let repoList = [];
                 let repoListMore = [];
+                let language_color
                 repos.slice(0, 4).forEach(
                     repo => {
 
@@ -65,10 +66,35 @@ function github_api() {
                             repo.description = "&nbsp;"
                         }
 
+                        // Circle color according to language
+                        
+                        switch (repo.language) {
+                            case 'HTML':
+                                language_color = "language_html"
+                                break;
+                            case 'CSS':
+                                language_color = "language_css"
+                                break;
+                            case 'JavaScript':
+                                language_color = "language_js"
+                                break;
+                            case 'PHP':
+                                language_color = "language_php"
+                                break;
+                            case 'C++':
+                                language_color = "language_cPlusPlus"
+                                break;
+                            case 'TeX':
+                                language_color = "language_TeX"
+                                break;
+                            default:
+                                language_color = "language_default"
+                        }
+
                         repoList.push(`
                         <li><a class="name" title="Redirect to github.com" target="_blanc" href="${repo.html_url}">${repo.name}</a>
                             <div class="description">${repo.description}</div>
-                            <span><i class="fas fa-circle">&nbsp;</i>${repo.language}</span>
+                            <span><i class="fas fa-circle ${language_color}">&nbsp;</i>${repo.language}</span>
                             <span><i class="fas fa-star">&nbsp;</i>${repo.stargazers_count}</span>
                             <span><i class="fas fa-code-branch">&nbsp;</i>${repo.forks}</span>
                         </li>                    
