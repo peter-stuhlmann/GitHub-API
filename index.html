@@ -10,10 +10,30 @@
 </head>
 
 <body>
+    <header>
+        <i class="fab fa-github">&nbsp;</i>
+        <input id="input" type="text" placeholder="Search another user...">
+        <nav class="topnav">
+            <ul>
+                <li><a target="_blank" href="https://github.com/pulls">Pull requests</a></li>
+                <li><a target="_blank" href="https://github.com/issues">Issues</a></li>
+                <li><a target="_blank" href="https://github.com/marketplace">Marketplace</a></li>
+                <li><a target="_blank" href="https://github.com/explore">Explore</a></li>
+            </ul>
+        </nav>
+        <nav class="usernav">
+            <ul>
+                <li><i class="fas fa-bell">&nbsp;</i></li>
+                <li><i class="fas fa-plus">&nbsp;</i><i class="fas fa-caret-down"></i></li>
+                <li id="userlogin"></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <aside></aside>
 
         <section class="content">
+            <h2>Repositories <span id="reposNumber"></span></h2>
             <ul class="gh_repositories"></ul>
         </section>
     </main>
