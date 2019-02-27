@@ -1,7 +1,6 @@
 "use strict";
 
 function github_api() {
-
     // USER
 
     let inputUserName = document.querySelector('#input').value || 'peter-stuhlmann'
@@ -113,11 +112,16 @@ document.querySelector('#input-search').addEventListener('click', github_api)
 
 // MAIN NAV
 
-function openTab(tabName) {
-    var i;
-    var x = document.querySelector('.tab');
+function openTab(event, tabName) {
+    var i, tablinks;
+    var x = document.getElementsByClassName('tab');
     for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
     }
-    document.querySelector('#tabName').style.display = "block";
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" selected", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    event.currentTarget.className += " selected";
 }
