@@ -50,6 +50,12 @@ function github_api() {
         .catch(
             err => console.log(`panic: ${err}`)
         )
+    
+    
+    // Add an ID to the body
+
+    document.getElementsByTagName("body")[0].setAttribute("id", inputUserName)
+
 
 
     // REPOSITORIES
