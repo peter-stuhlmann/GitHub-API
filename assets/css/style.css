@@ -4523,7 +4523,8 @@ footer {
   #mainnav button {
     font-size: 1em;
     padding: 15px calc(15px);
-    color: #666; }
+    color: #666;
+    border-bottom: 1px solid transparent; }
   #mainnav .selected {
     border-bottom: 1px solid #E36209;
     font-weight: bold;

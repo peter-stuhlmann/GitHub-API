@@ -16,7 +16,8 @@
     button {
         font-size: 1em;
         padding: $normalPadding calc(#{$normalPadding});
-        color: $tertiaryColor
+        color: $tertiaryColor;
+        border-bottom: 1px solid transparent
     }
 
     .selected {
