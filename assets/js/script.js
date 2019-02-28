@@ -19,13 +19,13 @@ function github_api() {
                     user.bio = ""
                 }
                 if (user.location == null) {
-                    user.location = ""
+                    user.location = "<i>(no data availible)</i>"
                 }
                 if (user.email == null) {
-                    user.email = ""
+                    user.email = "<i>(no data availible)</i>"
                 }
                 if (user.blog == null) {
-                    user.blog = ""
+                    user.blog = "<i>(no data availible)</i>"
                 }
 
                 userInfos.push(`
