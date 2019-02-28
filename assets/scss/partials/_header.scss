@@ -5,6 +5,11 @@ header {
     color: $secondaryColor !important;
     box-sizing: border-box;
 
+    img {
+        vertical-align: middle;
+        margin-right: 10px
+    }
+    
     .fab {
         color: $secondaryColor !important;
         font-size: 40px;

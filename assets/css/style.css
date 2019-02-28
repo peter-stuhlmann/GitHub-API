@@ -4392,6 +4392,9 @@ header {
   padding: 15px;
   color: #fff !important;
   box-sizing: border-box; }
+  header img {
+    vertical-align: middle;
+    margin-right: 10px; }
   header .fab {
     color: #fff !important;
     font-size: 40px;
