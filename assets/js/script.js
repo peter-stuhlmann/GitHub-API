@@ -1,9 +1,14 @@
 "use strict";
 
 function github_api() {
+    
     // USER
 
-    let inputUserName = document.querySelector('#input').value || 'peter-stuhlmann'
+    let username = location.href.slice(31)
+
+    let inputUserName = document.querySelector('#input').value || username || 'peter-stuhlmann'
+    location.href = `https://hotpink.eu/github-api/#${inputUserName}`
+
     fetch(`https://api.github.com/users/${inputUserName}?client_id=25bb194b081525d08147&client_secret=85f00c5312adc3596dbbc4c15ae7db009e99f9e5`)
         .then(
             response => response.json()
@@ -45,7 +50,6 @@ function github_api() {
         .catch(
             err => console.log(`panic: ${err}`)
         )
-
 
 
     // REPOSITORIES
@@ -156,7 +160,9 @@ function github_api() {
         )
 }
 
+
 github_api()
+
 document.querySelector('#input-search').addEventListener('click', github_api)
 
 
